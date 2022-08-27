@@ -16,6 +16,9 @@
     --other-background-color: #2F303A;
     --footer-adress-text-color: rgba(255, 255, 255, 0.6);
     --logo-text-color: #000000;
+
+    --icons-other-color: #AFB1B8;
+    --icons-background-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -61,6 +64,7 @@ header {
 .link {
     color: var(--secondary-text-color);
     text-decoration: none;
+    text-align: center;
 }
 .list {
     padding: 0;
@@ -91,9 +95,10 @@ header {
 }
 .site-nav .link,
 .site-adress .link{
-    display: block;
+    display: flex;
     padding-top: 31px;
     padding-bottom: 31px;
+    align-items: center;
 }
 .site-nav.list,
 .site-adress.list .link {
@@ -113,8 +118,13 @@ header {
 .footer .link:focus {
     color: var(--accent-color);
 }
+/* іконки навігації */
+.icon-mail,
+.icon-smartphone {
+    fill: currentColor;
+    margin-right: 10px;
+} 
 
- 
 
 
 /* Шапка основного контенту */
@@ -122,10 +132,13 @@ header {
     padding-top: 200px;
     padding-bottom: 200px;
 
-    background-color: var(--other-background-color);
+    background: rgba(47, 48, 58, 0.4);
+    background-image: url(../images/img-main.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .main.container {
-
     text-align: center;
 }
 .main.section .title {
@@ -159,7 +172,18 @@ header {
 }
 
 
+
 /* Особливості */
+.feature-picture {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-background-color);
+}
 .feature.list {
     display: flex;
     flex-wrap: wrap;
