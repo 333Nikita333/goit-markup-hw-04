@@ -5,6 +5,9 @@
 /* Колір вторичного фону #F5F4FA*/
 /* Колір фону шапки та футера #2F303A */
 /* Колір тексту адреси футера rgba(255, 255, 255, 0.6)*/
+/* Колір напису "Студіо" #000000*/
+/* Колір іконок #AFB1B8*/
+/* Колір задноього фону іконок rgba(255, 255, 255, 0.1)*/
 
 /* Основні змінні сайту */
 :root {
@@ -16,7 +19,6 @@
     --other-background-color: #2F303A;
     --footer-adress-text-color: rgba(255, 255, 255, 0.6);
     --logo-text-color: #000000;
-
     --icons-other-color: #AFB1B8;
     --icons-background-color: rgba(255, 255, 255, 0.1);
 }
@@ -269,6 +271,7 @@ header {
 }
 .person-list{
     width: calc((100% - 90px) / 4);
+    padding-bottom: 30px;
     
     background-color: var(--primary-background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
@@ -279,17 +282,9 @@ header {
 .person-list:not(:nth-child(4n)) {
     margin-right: 30px;
 }
-.person-title {
-    margin-top: 0;
-    margin-bottom: 0;
-
-    font-size: 16px;
-    line-height: 1.36;
-    text-align: center;
-}
 .container-person {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 16px;
 }
 .person-name {
     margin-top: 0;
@@ -301,7 +296,77 @@ header {
     line-height: 1.19;
     text-align: center;
 }
+.person-title {
+    margin-top: 0;
+    margin-bottom: 0;
 
+    font-size: 16px;
+    line-height: 1.36;
+    text-align: center;
+}
+.container-links {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.social-link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--icons-other-color);
+    fill: currentColor;
+    border-radius: 50%;
+}
+.container-links .social-link:hover,
+.container-links .social-link:focus {
+    color: var(--primary-background-color);
+    background-color: var(--accent-color);
+}
+.container-links .list:not(:last-child) {
+    margin-right: 10px;
+}
+
+
+
+/* Секція Клієнти */
+.clients .title {
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    color: var(--secondary-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+}
+.container-clients {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.container-clients .list:not(:last-child){
+    margin-right: 30px;
+}
+.list .client-link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--icons-other-color);
+    fill: currentColor;
+    border: 1px solid var(--icons-other-color);
+    border-radius: 4px;
+}
+.list .client-link:hover,
+.list .client-link:focus {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
 
 
 /* Футер сайту */
@@ -311,7 +376,10 @@ header {
 
     background-color: var(--other-background-color);
 }
-.footer.container .logo {
+.container.footer {
+    display: flex;
+}
+.container-adress .logo {
     display: inline-block;
     padding-top: 0;
     padding-bottom: 0;
@@ -335,11 +403,37 @@ header {
 .link-mail {
     margin-bottom: 9px;
 }
+.container-join {
+    margin-top: 12px;
+    margin-left: 95px;
+}
+.container-join .tittle {
+    margin-top: 0;
+    margin-bottom: 20px;
 
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--primary-background-color);
+}
+.container-join .list.link {
+    display: flex;
+    padding: 0;;
+}
+.container-join .list.item:not(:last-child) {
+    margin-right: 10px;
+}
+.container-join .social-link {
+    background-color: var(--icons-background-color);
+}
+.container-join .social-link:hover,
+.container-join .social-link:focus {
+    background-color: var(--accent-color);
+}
 
 
 /* Стилі для portfolio.html */
-/* Кнопки-фільтри */
+/* кнопки-фільтри */
 .filters .container {
     flex-wrap: wrap;
 }
@@ -369,12 +463,6 @@ header {
 }
 .filters .button:hover,
 .filters .button:focus {
-    color: var(--primary-background-color);
-    background-color: var(--accent-color);
-}
-.filters .button.current {
-    padding: 6px 25px;
-
     background-color: var(--accent-color);
     color: var(--primary-background-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
@@ -384,7 +472,7 @@ header {
 
 
 
-/* Список портфоліо */
+/* список портфоліо */
 .portfolio.list {
     display: flex;
     flex-wrap: wrap;
@@ -398,6 +486,12 @@ header {
 }
 .portfolio.list .item:nth-last-child(-n+3) {
     margin-bottom: 0px;
+}
+.portfolio.list .item:hover,
+.portfolio.list .item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+                0px 4px 4px rgba(0, 0, 0, 0.06), 
+                1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio.list a {
     text-decoration: none;
