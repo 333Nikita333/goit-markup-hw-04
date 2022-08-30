@@ -128,12 +128,12 @@ header {
 } 
 
 
-
-/* Шапка основного контенту */
 .main.section {
+    width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
     padding-top: 200px;
     padding-bottom: 200px;
-    /* rgba(47, 48, 58, 0.4) */
     
     background-image: linear-gradient(
         to right, 
@@ -232,7 +232,7 @@ header {
 
 
 
-/* Чим ми займаємось */
+/* Секція Чим ми займаємось */
 .description.section .title,
 /* ...наша команда */
 .team .title {
@@ -261,7 +261,7 @@ header {
 
 
 
-/* Наша команда */
+/* Секція Наша команда */
 .team {
     background-color: var(--secondary-background-color);
 }
@@ -284,7 +284,6 @@ header {
 }
 .container-person {
     padding-top: 30px;
-    padding-bottom: 16px;
 }
 .person-name {
     margin-top: 0;
@@ -298,7 +297,7 @@ header {
 }
 .person-title {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 16px;
 
     font-size: 16px;
     line-height: 1.36;
@@ -378,6 +377,7 @@ header {
 }
 .container.footer {
     display: flex;
+    align-items: baseline;
 }
 .container-adress .logo {
     display: inline-block;
@@ -404,7 +404,6 @@ header {
     margin-bottom: 9px;
 }
 .container-join {
-    margin-top: 12px;
     margin-left: 95px;
 }
 .container-join .tittle {
